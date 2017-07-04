@@ -1,0 +1,22 @@
+extends ../_template
+
+block variables
+  - var title = 'Обо мне'
+
+block content
+  .content
+    .wrapper
+      include ../common/_hamburger_menu
+      section.section.hero
+        include ../common/_header
+        .about__user
+          .about__bg-title
+          include ../common/_user
+            svg.user__title-bg
+              use(xlink:href="./assets/img/sprite.svg#portfolio_header")
+        a(href="").down-arrow
+      include ../sections/_about
+      include ../sections/_map
+    .about__footer
+      include ../common/_footer
+  include ../common/_preloader

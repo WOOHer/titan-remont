@@ -1,0 +1,97 @@
+.contacts {
+  @include centrize;
+  margin-top: -73px;
+
+  @include phones {
+    position: static;
+    margin-top: 0;
+    top: 0;
+    left: 0;
+    transform: translateX(0);
+  }
+
+  &__float-square {
+    padding: 30px 20px;
+    background-color: rgba(#fff, .85);
+    width: 380px;
+    border-radius: 5px;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    @include tablets {
+      margin-top: -50px;
+    }
+
+    @include phones {
+      margin-top: 0;
+      width: 100%;
+    }
+  }
+
+  & .title__block {
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & .subtitle {
+      &:before{
+        @include phones {
+          right: -40px;
+        }
+      }
+
+      &:after {
+        @include phones {
+          left: -40px;
+        }
+      }
+    }
+  }
+}
+
+.contacts__link {
+  display: flex;
+  align-items: center;
+}
+
+.contacts__item {
+  margin: 15px 0;
+  opacity: .8;
+
+  @include iphones {
+    line-height: 28px;
+  }
+}
+
+.contacts__text {
+  color: $gray;
+  @include roboto(medium);
+  flex: 3;
+}
+
+.footer__contacts a {
+  color: rgba(#ffffff, .5);
+  @include roboto(light);
+
+  @include tablets {
+    justify-content: flex-end;
+  }
+}
+
+.footer__right .contacts__item {
+  margin: 0 0 1px 0;
+}
+
+.fa {
+  color: $orange;
+  font-size: 30px;
+  flex: 1;
+}
+
+.contacts__items {
+  width: 100%;
+}

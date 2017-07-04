@@ -1,0 +1,91 @@
+.float-square__connection {
+  max-width: 380px;
+  padding: 0;
+  border-radius: 5pх;
+  margin-top: 60px;
+
+  @include iphones {
+    width: 95%;
+  }
+}
+
+.connect {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow: hidden;
+  padding: 0 20px;
+}
+
+.connect-form__title {
+  margin-bottom: 15px;
+  margin-top: 25px;
+}
+
+.input-area {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: $input-area-margin;
+  height: $input-area-height;
+  color: gray;
+  width: 100%;
+  position: relative;
+
+  &__login, &__password {
+    padding-left: 65px;
+  }
+
+  &__prev {
+    position: absolute;
+    background-color: #f0efe9;
+    width: 45px;
+    height: 45px;
+    border-radius: 5px 0 0 5px;
+
+    &_pass {
+      margin-top: $input-area-margin + $input-area-height;
+    }
+  }
+}
+
+.text-area {
+  height: 140px;
+  resize: none;
+}
+
+input[type='text']::placeholder {
+  opacity: .5;
+}
+
+textarea[type='text']::placeholder {
+  opacity: .5;
+}
+
+input[type='password']::placeholder {
+  opacity: .5;
+}
+
+textarea.input-area {
+  margin-bottom: 20px;
+}
+
+.up-arrow {
+  height: 140px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.up-arrow__body {
+  height: 16px;
+  width: 26px;
+  fill: #fff;
+  border-radius: 1px;
+  transform: rotate(180deg);
+
+  &:hover {
+    opacity: .5;
+  }
+}

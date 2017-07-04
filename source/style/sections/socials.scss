@@ -1,0 +1,42 @@
+.socials {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.social__link {
+  display: block;
+}
+
+.social__item  {
+  fill: #fff;
+  margin-right: 30px;
+  opacity: 1;
+
+  &_vk {
+    height: 17px;
+    width: 31px;
+    margin-top: 2px;
+  }
+
+  &_gh {
+    height: 22px;
+    width: 26px;
+  }
+
+  &_in {
+    height: 22px;
+    width: 24px;
+    margin-right: 0;
+    margin-top: -1px;
+  }
+
+  &:hover {
+    fill: #cd8920;
+    transition: 0.5s;
+  }
+
+  &_white {
+    transition: 0.5s;
+  }
+}

@@ -1,0 +1,18 @@
+.float-square.float-square__connection
+    .connect
+        .sub__title
+            h2.connect-form__title.subtitle СВЯЗАТЬСЯ СО МНОЙ
+        form(id="order-form", action="php/action.php", method="post", enctype="multipart/form-data").input-areas
+            label.input-block
+            input(type="text", name="name", placeholder="Имя").input-area
+            label.input-block
+            input(type="text", name="email", placeholder="Email").input-area
+            label.input-block
+            textarea(type="text", name="comments", placeholder="Ваше сообщение").input-area.text-area
+            .form__btns
+                input(type="submit", value="Отправить").form__btns_send
+                input(type="reset", value="Очистить").form__btns_clear
+.up-arrow
+    svg.up-arrow__body
+        use(xlink:href="./assets/img/sprite.svg#arrow_down")
+

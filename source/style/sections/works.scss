@@ -1,0 +1,78 @@
+.works {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+
+.headline {
+  background-color: #faf8f0;
+  height: 180px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  @include tablets {
+    height: 100%;
+  }
+}
+
+.works__title-pos {
+  padding: 10px 50px;
+  margin-top: -140px;
+
+  @include tablets {
+    top: 10px;
+    text-align: center;
+  }
+
+  @include iphones {
+    top: -10px;
+  }
+
+  .title__bg {
+    width: 100%;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+
+    @include tablets {
+      top: 35px;
+    }
+
+    @include iphones {
+      top: 73px;
+    }
+  }
+
+  &:before {
+    top: -5px;
+    @include tablets {
+      top: 21px;
+    }
+
+    @include iphones {
+      top: 53px;
+      right: 35px;
+    }
+  }
+
+  &:after {
+    top: -5px;
+    @include tablets {
+      top: 21px;
+    }
+
+    @include iphones {
+      top: 53px;
+      left: 35px;
+    }
+  }
+}
+
+.work__triangals {
+  position: relative;
+  width: 100%;
+  height: 160px;
+  top: -160px;
+}

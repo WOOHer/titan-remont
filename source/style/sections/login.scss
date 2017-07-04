@@ -1,0 +1,149 @@
+.float-square_login {
+  display: block;
+  & .input-area {
+    width: 340px;
+  }
+}
+
+.login__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px 0;
+  margin-top: 1px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login__title {
+  color: #ffffff;
+  margin-bottom: 22px;
+
+  &.subtitle {
+    font-weight: 300;
+
+    &:after {
+      content: url('../img/decor/ellipsew-small-left.svg');
+
+      @include iphones {
+        left: -35px;
+        top: -3px;
+      }
+    }
+
+    &:before {
+      content: url('../img/decor/ellipsew-small-right.svg');
+
+      @include iphones {
+        right: -35px;
+        top: -3px;
+      }
+    }
+  }
+}
+
+.input-radio, .bot-checkboxes {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.radio {
+  position: relative;
+  margin-right: 10px;
+
+  &:after {
+    display: block;
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: $orange;
+    position: absolute;
+    bottom: -2px;
+    left: -4px;
+    border-radius: 2px;
+  }
+
+  &:before {
+    display: block;
+    content: "";
+    width: 4px;
+    height: 7px;
+    border: 3px solid #fff;
+    border-top: none;
+    border-left: none;
+    position: absolute;
+    transform: rotate(45deg);
+    z-index: 1;
+    left: 3px;
+    bottom: 4px;
+    border-radius: 2px;
+  }
+}
+
+.human-radio {
+  color: rgba(#ffffff, .8);
+}
+
+.human-checkbox {
+  margin-bottom: 16px;
+}
+
+.bot-checkbox {
+  text-align: center;
+  color: rgba(#ffffff, .8);
+  margin-bottom: 41px;
+
+  & p {
+    font-weight: bold;
+    color: rgba(#ffffff, .8);
+    margin-bottom: 10px;
+  }
+}
+
+.clear-radio {
+  height: 20px;
+  width: 20px;
+  position: relative;
+  margin-right: 10px;
+
+  &:after {
+    display: block;
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    position: absolute;
+  }
+
+  &_checked:before {
+    display: block;
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: $orange;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.bot-radio__yes {
+  margin-right: 40px;
+}
+
+.input__bg {
+  width: 18px;
+  height: 17px;
+  fill: #c4cbcd;
+  @include centrize;
+  z-index: 1;
+}

@@ -1,0 +1,50 @@
+//inline-blocks
+@mixin inlineblock($valign: middle) {
+  display: inline-block;
+  vertical-align: $valign;
+}
+
+//breakpoints
+@mixin laptops() {
+  @media screen and (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin netbooks() {
+  @media screen and (max-width: 1064px) {
+    @content;
+  }
+}
+
+@mixin lowres () {
+  @media screen and (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin tablets() {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin phones() {
+  @media screen and (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin iphones() {
+  @media screen and (max-width: 320px) {
+    @content;
+  }
+}
+
+//centronizer
+@mixin centrize() {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

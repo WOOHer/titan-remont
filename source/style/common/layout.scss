@@ -1,0 +1,107 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  @include netbooks {
+    font-size: 15px;
+  }
+
+  @include tablets {
+    font-size: 14px;
+  }
+
+  @include phones {
+    height: 300px;
+    font-size: 13px;
+  }
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  @include roboto(regular);
+  font-size: 16px;
+  line-height: 1.42;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+
+  &.fixed {
+    overflow: hidden;
+  }
+}
+
+%clearfix {
+  &:after, &:before {
+    content: "";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+.content {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  overflow: hidden;
+  justify-content: center;
+
+  @incclude iphones {
+    width: 95%;
+  }
+}
+
+.wrapper {
+  flex: 1;
+}
+
+p {
+  margin: 0;
+  color: $gray;
+  margin-bottom: 16px;
+}
+
+h1 {
+  text-transform: uppercase;
+
+  @include lowres {
+    font-size: 50px;
+  }
+}
+
+h2 {
+  text-transform: uppercase;
+
+  @include lowres {
+    font-size: 30px;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @include sansus(regular);
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul, a {
+  color: #fff;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.float-square {
+  background: rgba(#d7bf9b, .6);
+  border-radius: 5px;
+  padding-bottom: 0;
+  padding-top: 20px;
+}

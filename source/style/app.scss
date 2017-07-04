@@ -1,0 +1,47 @@
+//vars
+$footerh: 147px;
+$input-area-margin: 20px;
+$input-area-height: 45px;
+
+//colors
+$gray: #5d5a55;
+$black: #373e42;
+$orange: #cd8920;
+$yellow: #e7a731;
+$beige: #ead8b4;
+$blue: #53595d;
+$red: #e44845;
+
+//mixins
+@import 'mixins';
+
+//common
+@import 'common/media';
+@import 'common/fonts';
+@import 'common/layout';
+@import 'common/footer';
+@import 'common/sidebar';
+@import 'common/preloader';
+@import '../../node_modules/font-awesome/scss/font-awesome';
+
+//sections
+@import 'sections/welcome';
+@import 'sections/about';
+@import 'sections/testimonials';
+@import 'sections/socials';
+@import 'sections/buttons';
+@import 'sections/user';
+@import 'sections/hero';
+@import 'sections/triangals';
+@import 'sections/skills';
+@import 'sections/title';
+@import 'sections/hamburger';
+@import 'sections/map';
+@import 'sections/contacts';
+@import 'sections/header';
+@import 'sections/works';
+@import 'sections/slider';
+@import 'sections/connection';
+@import 'sections/blog';
+@import 'sections/login';
+@import 'sections/flipper';

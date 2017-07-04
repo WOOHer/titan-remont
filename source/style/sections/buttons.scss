@@ -1,0 +1,134 @@
+//nav-btns
+.nav-btns, .login-btns {
+  height: 45px;
+  width: 100%;
+}
+
+.nav__items {
+  display: flex;
+  justify-content: space-around;
+  padding-left: 0;
+}
+
+.nav__item {
+  padding: 12px 31px;
+  text-decoration: none;
+  border-right: 2px solid rgba(#fff, .3);
+
+  &:first-child {
+    border-radius: 0 0 0 5px;
+  }
+
+  &:last-child {
+    border-radius: 0 0 5px 0;
+  }
+
+  &:hover {
+    background-color: $orange;
+  }
+
+  &:last-child {
+    border: none;
+  }
+}
+
+.auth-btn {
+  display: block;
+  padding: 15px 28px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  color: #fff;
+  position: absolute;
+  top: 37px;
+  right: 103px;
+  transition: .5s;
+  background-color: transparent;
+
+  &:hover {
+    background-color: #ffffff;
+    color: $orange;
+  }
+
+  @include laptops {
+    right: 20px;
+  }
+
+  @include phones {
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px;
+    text-align: center;
+  }
+}
+
+.headline__btn {
+  padding: 13px 18px;
+  border-radius: 5px;
+}
+
+.btn__link {
+  fill: #fff;
+  height: 20px;
+  width: 20px;
+  margin-right: 10px;
+}
+
+.form__btns {
+  display: flex;
+  justify-content: space-between;
+  margin-left: -22px;
+
+  &_send {
+    border-radius: 0 0 0 5px;
+    border-style: none;
+  }
+
+  &_clear {
+    border-radius: 0 0 5px 0;
+    border-style: none;
+    margin-right: -20px;
+  }
+
+  &_send, &_clear {
+    padding: 15px 30px;
+    width: 189px;
+    margin-left: 2px;
+  }
+}
+
+.nav__item, .form__btns_send, .form__btns_clear, .headline__btn, .main-btn, .login-btn {
+  background-color: #efab26;
+  color: #ffffff;
+  vertical-align: top;
+  transition: .5s;
+  @include roboto(medium);
+  display: flex;
+  justify-content: center;
+
+  &:hover {
+    background-color: $orange;
+  }
+}
+
+.login-btns {
+  display: flex;
+  align-items: center;
+}
+
+.main-btn, .login-btn {
+  padding: 12px 30px;
+  width: 100%;
+  border-top: none;
+  border-right: 0;
+  border-bottom: 0;
+  border-left: 0;
+}
+
+.login-btn {
+  border-left: 2px solid rgba(#fff, .3);
+  border-radius: 0 0 5px 0;
+}
+
+.main-btn {
+  border-radius: 0 0 0 5px;
+}

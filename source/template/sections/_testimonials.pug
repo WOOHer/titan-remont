@@ -1,0 +1,26 @@
+section.section.testimonials
+    .testimonials__content
+        h1.title.testimonials__title-pos Что обо мне говорят
+            svg.title__bg
+                use(xlink:href="./assets/img/sprite.svg#works_header")
+        ul.testimonials__items
+            li.testimonials__item
+                .testimonials__text
+                    p Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+                .reviewer
+                    .reviewer__pic
+                        img(src="./assets/img/dk.jpg", alt="").reviewer__pic_margin_top
+                    .reviewer__info
+                        .reviewer__name Ковальчук Дмитрий
+                        .reviewer__ocupation основатель Loftschool
+            li.testimonials__item
+                .testimonials__text
+                    p Этот код легко может выдержать любые испытания. Только нужно иметь в виду, что сайт может не загружаться на слишком старых браузерах!
+                .reviewer
+                    .reviewer__pic
+                        img(src="./assets/img/vs.jpg", alt="")
+                    .reviewer__info
+                        .reviewer__name Сабанцев Владимир
+                        .reviewer__ocupation Преподаватель
+        include ./_connection
+

@@ -1,0 +1,151 @@
+.about {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__triangals {
+    position: relative;
+    width: 100%;
+
+    .fill_about {
+      position: absolute;
+
+      &_left {
+        fill: #EFEEE9 !important;
+      }
+
+      &_right {
+        fill: #eeebdf !important;
+
+        @include lowres {
+          fill: #EFEEE9 !important;
+        }
+      }
+    }
+  }
+
+  @include lowres {
+    flex-wrap: wrap;
+  }
+
+  @include phones {
+    width: 100%;
+  }
+}
+
+.about__left, .about__right {
+  position: relative;
+  width: 50%;
+
+  @include lowres {
+    width: 100%;
+  }
+}
+
+.about__left {
+  background: #efeee9;
+  display: flex;
+  padding-right: 20px;
+
+  @include laptops {
+    flex-direction: column;
+    padding-bottom: 30px;
+  }
+
+  @include phones {
+    padding-right: 0;
+  }
+}
+
+.about__right {
+  background: #eeebdf;
+
+  @include laptops {
+    padding-top: 40px;
+  }
+}
+
+.about__pic {
+  margin: 12px 0 40px;
+  overflow: hidden;
+  height: 390px;
+  width: 443px;
+
+  @include lowres {
+    width: 473px;
+    height: 416px;
+  }
+}
+
+.about__title-pos {
+  padding: 10px 50px;
+  margin-top: 0px;
+
+  .title__bg {
+    width: 100%;
+    left: 0;
+    top: -43px;
+
+    @include tablets {
+      top: -54px;
+    }
+  }
+
+  &:before {
+    top: 5px;
+  }
+
+  &:after {
+    top: 5px;
+  }
+}
+
+.about__title, .sub__title {
+  text-align: center;
+  margin-bottom: 20px;
+
+  & .subtitle {
+    &:before{
+      @include phones {
+        right: -35px;
+      }
+    }
+
+    &:after {
+      @include phones {
+        left: -35px;
+      }
+    }
+  }
+}
+
+.about__content {
+  overflow: hidden;
+  width: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+
+  @include laptops {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+.title__block {
+  width: 40%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 14px;
+
+  @include laptops {
+    width: 100%;
+  }
+}
+
+.about__content, .skills {
+  padding: 20px;
+}

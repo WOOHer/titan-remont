@@ -1,0 +1,29 @@
+.slider
+    .headline__section
+        .headline__text
+            .sub__title
+                h2.about__title.subtitle САЙТ ШКОЛЫ ОНЛАЙН ОБРАЗОВАНИЯ
+            .headline__topics HTML, CSS, JAVASCRIPT
+            a(href="#").headline__btn
+                svg.btn__link
+                    use(xlink:href="./assets/img/sprite.svg#link")
+                | Посмотреть
+    .slider__section
+        .preloader
+        img(src="./assets/img/slide_1.png", alt="").slider__section_pic
+    ul.thumbnail__section
+        li.thumbnail__section_item
+            a(href="./assets/img/slide_2.png").slideshow__link
+                img(src="./assets/img/slide_2.png" alt="").slideshow__pic
+            .thumbnail__bg
+                .move-arrow
+                    svg.move-down-arrow__body
+                        use(xlink:href="./assets/img/sprite.svg#arrow_down")
+        li.thumbnail__section_item
+            a(href="./assets/img/slide_3.png").slideshow__link
+                img(src="./assets/img/slide_3.png" alt="").slideshow__pic
+            .thumbnail__bg
+                .move-arrow
+                    svg.move-down-arrow__body
+                        use(xlink:href="./assets/img/sprite.svg#arrow_up")
+

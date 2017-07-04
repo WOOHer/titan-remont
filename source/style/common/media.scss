@@ -1,0 +1,32 @@
+//about
+.about {
+  @include laptops {
+
+  }
+
+  @include tablets {
+
+  }
+
+  @include phones {
+    width: 95%;
+  }
+}
+
+.about__left {
+  @include laptops {
+    flex-direction: column;
+  }
+}
+
+.about__content {
+  @include laptops {
+    width: 100%;
+  }
+}
+
+.title__block {
+  @include laptops {
+    width: 100%;
+  }
+}
