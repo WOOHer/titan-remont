@@ -1,5 +1,7 @@
 'use strict';
 
+
+/*
 //map
 ymaps.ready(init);
 var myMap,
@@ -116,7 +118,7 @@ var preloader = (function(){
         }
       }
 }());
-/*
+
 var slider = (function () {
     var counter = 1,
         duration = 300,
@@ -163,7 +165,7 @@ var slider = (function () {
         }
     }
 }());
-*/
+
 var slideShow = (function () {
     return {
         init: function () {
@@ -313,3 +315,4 @@ $(function () {
     //     $.fancybox.close();
     // });
 });
+*/
