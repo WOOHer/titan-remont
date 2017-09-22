@@ -1,0 +1,201 @@
+.otzivi {
+  overflow: hidden;
+  position: relative;
+  background: rgba(124, 123, 123, .6);
+  display: flex;
+  justify-content: center;
+}
+
+.otzivi__toggler {
+
+  &_left, &_right {
+    position: absolute;
+    top: 60%;
+  }
+
+  &_left {
+    left: 25px;
+
+    &:hover .otzivi__toggler_pic {
+      opacity: .5;
+    }
+  }
+
+  &_right {
+    right: 25px;
+    &:hover .otzivi__toggler_pic_rotated {
+      opacity: .5;
+    }
+  }
+
+  &_pic, &_pic_rotated {
+    transition: .5s;
+  }
+
+  &_pic {
+    height: 100px;
+    width: 100px;
+    fill: #ffffff;
+    opacity: .05;
+
+    &_rotated {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.otzivi__bg {
+  background-image: url(../img/paralax/feedbacks.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  filter: blur(5px);
+  z-index: -2;
+}
+
+.title__otzivi {
+  margin: 60px 0;
+}
+
+.otzivi__items {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.ava {
+  height: 134px;
+  width: 134px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex: none;
+  margin-bottom: 30px;
+}
+
+.otzivi__pic {
+  height: 100%;
+  width: 100%;
+}
+
+.otzivi__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+  max-height: 540px;
+  flex: 5;
+  margin: 0 10%;
+  overflow: hidden;
+
+  &:first-child, &:last-child {
+    max-height: 124px;
+    flex: 1;
+    margin: 0;
+
+    & .otzivi__name {
+      font-size: 10px;
+      margin-bottom: 2px;
+    }
+
+    & .otzivi__text {
+      font-size: 7px;
+      margin-bottom: 0;
+      margin-top: 0;
+      position: relative;
+      z-index: 999;
+    }
+
+    & .otzivi__date {
+      font-size: calc(6px - 3px);
+      margin-bottom: 6px;
+    }
+
+    & .ava {
+      height: 33px;
+      width: 33px;
+      margin-bottom: 9px;
+    }
+
+    & .otzivi__rate {
+      height: 5px;
+      margin-bottom: 2px;
+    }
+
+    & .rate__item {
+      margin-left: 1px;
+      height: 5px;
+
+      &__pic {
+        height: 5px;
+        width: 5px;
+      }
+    }
+  }
+}
+
+.otzivi__name {
+  @include gotham (bold);
+  font-size: 36px;
+  color: #2d2b2b;
+  margin-bottom: 15px;
+}
+
+.otzivi__date {
+  @include roboto(italic);
+  font-size: 14px;
+  color: $white;
+  margin-bottom: 26px;
+}
+
+.otzivi__rate {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+
+.rate__item {
+  margin-left: 5px;
+  height: 22px;
+  display: flex;
+
+  &__pic {
+    height: 22px;
+    width: 22px;
+    fill: $orange;
+  }
+}
+
+.otzivi__text {
+  text-align: center;
+  @include cormac (light);
+  color: #ffffff;
+  overflow: hidden;
+  font-size: 30px;
+  min-height: 210px;
+  margin-top: 28px;
+}
+
+.leave-feedback-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $orange;
+  padding: 15px 20px;
+  border-radius: 10px;
+  @include gotham (regular);
+  font-size: 23px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: .5s;
+  margin-bottom: 90px;
+  margin-top: 72px;
+
+  &:hover {
+    background: $brown;
+    color: rgba(255, 255, 255, .5);
+  }
+}

@@ -41,10 +41,78 @@
   }
 }
 
+
 //centronizer
 @mixin centrize() {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+
+//fonts
+@mixin gotham($style : regular) {
+  @if $style == regular {
+    font-family: 'GothamPro', Arial, sans-serif;
+  }
+
+  @if $style == bold {
+    font-family: 'GothamPro-Bold', Arial, sans-serif;
+  }
+
+  @if $style == light {
+    font-family: 'GothamPro-Light', Arial, sans-serif;
+  }
+
+  @if $style == medium {
+    font-family: 'GothamPro-Medium', Arial, sans-serif;
+  }
+}
+
+@mixin arch($style : regular) {
+  @if $style == regular {
+    font-family: 'archangelskregular', Arial, sans-serif;
+  }
+}
+
+@mixin cormac($style : regular) {
+  @if $style == bold {
+    font-family: 'cormacblack', Arial, sans-serif;
+  }
+
+  @if $style == light {
+    font-family: 'cormacextra_light', Arial, sans-serif;
+  }
+}
+
+
+@mixin roboto($style : regular) {
+  @if $style == regular {
+    font-family: 'robotoregular', Arial, sans-serif;
+  }
+
+  @if $style == medium-italic {
+    font-family: 'robotomedium_italic', Arial, sans-serif;
+  }
+
+  @if $style == medium {
+    font-family: 'robotomedium', Arial, sans-serif;
+  }
+
+  @if $style == light-italic {
+    font-family: 'robotolight_italic', Arial, sans-serif;
+  }
+
+  @if $style == light {
+    font-family: 'robotolight', Arial, sans-serif;
+  }
+
+  @if $style == italic {
+    font-family: 'robotoitalic', Arial, sans-serif;
+  }
+
+  @if $style == bold {
+    font-family: 'robotoblack', Arial, sans-serif;
+  }
 }

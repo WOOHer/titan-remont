@@ -1,0 +1,33 @@
+section.header
+    .header__left
+        a.logo(href="../pages/index.html" title='Сервисный центр "Прометей"')
+            svg.logo__pic
+                use(xlink:href="./assets/img/sprite.svg#logo")
+    .header__middle
+        include _nav
+    .header__right
+        .phone-block
+            .top-phone
+                a.top-phone__link(href="tel:79991002448")
+                    svg.top-phone__pic
+                        use(xlink:href="./assets/img/sprite.svg#ph")
+                    .top-phone__text 8(8332)45-07-07
+            .search
+                form.search__block(method="get" action="/search" target="_parent")
+                    input.search__line(name="search" value="" type="text" placeholder="Поиск по сайту")
+                    input.search__pic(src="assets/img/png-sprites/search.svg" type="image")
+        .top-contacts
+            ul.top-contacts__icons
+                li.top-contacts__icon
+                    a.top-contacts__link(href="mailto:prometey@inbox.ru" title="Напишите нам")
+                        svg.top-contacts__pic
+                            use(xlink:href="./assets/img/sprite.svg#mail")
+                li.top-contacts__icon
+                    a.top-contacts__link(href="#" title="Заказать обратный звонок")
+                        svg.top-contacts__pic
+                            use(xlink:href="./assets/img/sprite.svg#skype")
+                li.top-contacts__icon
+                    a.top-contacts__link(href="skype:prometey?call" title="Связаться по Skype")
+                        svg.top-contacts__pic
+                            use(xlink:href="./assets/img/sprite.svg#callback")
+

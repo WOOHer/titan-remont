@@ -1,14 +1,14 @@
-mixin skills(params)
-    ul.skills__stats
-        each skill in params
-            li.skills__item
-                .skill-section
-                    .skill-section__title= skill.name
-                    ul.skill-section__list
-                        each skillName in skill.skills
-                            li.skill-section__item
-                                .skill
-                                    svg(height="120", width="120").skill__circle
-                                        circle(cx="60", cy="60", r="50").circle__first
-                                        circle(cx="60", cy="60", r="50", transform="rotate(-90 60 60)", stroke-dasharray=skillName.count).circle__second
-                                        .skill__name= skillName.name
+//mixin skills(params)
+//    ul.skills__stats
+//        each skill in params
+//            li.skills__item
+//                .skill-section
+//                    .skill-section__title= skill.name
+//                    ul.skill-section__list
+//                        each skillName in skill.skills
+//                            li.skill-section__item
+//                                .skill
+//                                    svg(height="120", width="120").skill__circle
+//                                        circle(cx="60", cy="60", r="50").circle__first
+//                                        circle(cx="60", cy="60", r="50", transform="rotate(-90 60 60)", stroke-dasharray=skillName.count).circle__second
+//                                        .skill__name= skillName.name

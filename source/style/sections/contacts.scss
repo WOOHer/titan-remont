@@ -1,0 +1,91 @@
+.contacts {
+  overflow: hidden;
+  position: relative;
+  background: rgba(124, 123, 123, .6);
+  display: flex;
+  justify-content: center;
+  height: 836px;
+
+  &__bg {
+    background-image: url(../img/paralax/contacts.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    filter: blur(8px);
+    z-index: -2;
+  }
+
+  &__items {
+    margin-bottom: 25px;
+  }
+}
+
+.contacts__content {
+  background: rgba(255, 255, 255, .65);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 22px;
+}
+
+.title__contacts {
+  color: #3e3e3e;
+  position: relative;
+  margin-bottom: 12px;
+
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 35px;
+    background: #3e3e3e;
+    top: 50%;
+    left: -20%;
+    transform: translateY(-50%);
+    margin-top: -2px;
+  }
+
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 35px;
+    background: #3e3e3e;
+    top: 50%;
+    right: -20%;
+    transform: translateY(-50%);
+    margin-top: -2px;
+  }
+}
+
+.contacts__link {
+  display: flex;
+  color: $black;
+  justify-content: flex-start;
+  align-items: center;
+  transition: .5s;
+  
+  &:hover {
+    background: rgba(47, 141, 52, .16);
+  }
+}
+
+.contacts__pic {
+  height: 42px;
+  width: 42px;
+  margin: 0 47px 0 70px;
+}
+
+.contacts__text {
+  @include cormac(light);
+  font-size: 27px;
+  line-height: 76px;
+  margin-right: 70px;
+  color: #3e3e3e;
+}

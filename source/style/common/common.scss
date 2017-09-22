@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.42;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+%clearfix {
+  &:after, &:before {
+    content: "";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+*/
+.content {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  overflow: hidden;
+  justify-content: center;
+}
+
+.wrapper {
+  flex: 1;
+  overflow: hidden;
+}
+
+p {
+  margin: 0;
+}
+
+h1 {
+  text-transform: uppercase;
+}
+
+h2 {
+  text-transform: uppercase;
+
+  &.title {
+    font-size: 55px;
+
+    &__service, &__otzivi, &__work-process {
+      color: $black;
+      text-transform: inherit;
+    }
+
+    &__otzivi {
+      color: #fff;
+    }
+  }
+}
+
+h3 {
+  font-size: 43px;
+  color: $black;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @include arch(regular);
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: normal;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+input {
+  padding-left: 10px;
+
+  &::-webkit-input-placeholder {
+    color: rgba(124, 123, 123, .4);
+  }
+
+  &::-moz-placeholder {
+    color:#c0392b;
+  }/* Firefox 19+ */
+
+  &:-moz-placeholder {
+    color:#c0392b;
+  }/* Firefox 18- */
+
+  &:-ms-input-placeholder {
+    color:#c0392b;
+  }
+}
+
+.btn {
+  border-radius: 5px;
+  text-align: center;
+  opacity: .6;
+  transition: .5s;
+
+  &_big {
+    max-width: 190px;
+    height: 47px;
+    background: $green;
+  }
+
+  &__link {
+    font-size: 24px;
+    color: $white;
+    line-height: 43px;
+    transition: .5s;
+    padding: 10px 55px;
+    width: 190px;
+
+    &:hover .btn {
+      @include gotham(medium);
+    }
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.container {
+  max-width: 1140px;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 0 10px;
+  position: relative;
+}
+
+section, .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

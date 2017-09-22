@@ -1,0 +1,82 @@
+.order-form {
+  position: absolute;
+  bottom: 7%;
+  right: 40px;
+}
+
+.order-form__dropleft {
+  height: 74px;
+  background: rgba(162, 162, 162, .4);
+  font-size: 24px;
+  @include roboto(medium);
+  color: $white;
+  justify-content: flex-end;
+  padding: 0 20px 0 30px;
+  align-items: center;
+  white-space: nowrap;
+  display: none;
+  border-radius: 50px 0 0 50px;
+  transition: .3s;
+}
+
+.order-form__items {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.order-form__item {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3px;
+
+  & .order-form__link {
+    color: $white;
+    line-height: 28px;
+    transition: .5s;
+
+    &:hover {
+      opacity: .4;
+    }
+  }
+
+  &:hover .order-form__pic {
+      fill: $green;
+  }
+
+  &:hover .order-form__dropleft {
+    display: flex;
+    animation-name: slideLeft;
+    animation-duration: .8s;
+    animation-timing-function: ease-in-out;
+    visibility: visible !important;
+  }
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.order-form__right-bg {
+  height: 74px;
+  min-width: 74px;
+  background: $orange;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 99;
+}
+
+.order-form__pic {
+  height: 44px;
+  width: 44px;
+  fill: #fff;
+  transition: .5s;
+}

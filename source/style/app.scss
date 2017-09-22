@@ -1,49 +1,41 @@
 //vars
-$footerh: 147px;
-$input-area-margin: 20px;
-$input-area-height: 45px;
+$footerh: 255px;
+//$input-area-margin: 20px;
+//$input-area-height: 45px;
 
-/*
+
 //colors
-$gray: #5d5a55;
-$black: #373e42;
-$orange: #cd8920;
-$yellow: #e7a731;
-$beige: #ead8b4;
-$blue: #53595d;
-$red: #e44845;
+$orange: #f28d00;
+$green: #2f8d34;
+$black: #3a3a3a;
+$dark-black: #030303;
+$white: #f8f8f8;
+$grey: #8a8a8a;
+$brown: #a0410d;
+$blue: #0054a6;
+$light-grey: #8a8989;
+$biruza: #0076a3;
 
 //mixins
 @import 'mixins';
 
 //common
-@import 'common/media';
-@import 'common/fonts';
-@import 'common/layout';
+@import 'common/common';
+@import 'common/header-alt';
+@import 'common/nav';
 @import 'common/footer';
-@import 'common/sidebar';
-@import 'common/preloader';
-@import '../../node_modules/font-awesome/scss/font-awesome';
+@import 'fonts/stylesheet';
+@import 'common/animate';
 
 //sections
-@import 'sections/welcome';
-@import 'sections/about';
-@import 'sections/testimonials';
-@import 'sections/socials';
-@import 'sections/buttons';
-@import 'sections/user';
-@import 'sections/hero';
-@import 'sections/triangals';
-@import 'sections/skills';
-@import 'sections/title';
-@import 'sections/hamburger';
-@import 'sections/map';
+@import 'sections/articles';
+@import 'sections/top-bar';
+@import 'sections/brands';
 @import 'sections/contacts';
-@import 'sections/header';
-@import 'sections/works';
+@import 'sections/feedbacks';
+@import 'sections/masters-menu';
+@import 'sections/order-form';
+@import 'sections/service';
 @import 'sections/slider';
-@import 'sections/connection';
-@import 'sections/blog';
-@import 'sections/login';
-@import 'sections/flipper';
-*/
+@import 'sections/video';
+

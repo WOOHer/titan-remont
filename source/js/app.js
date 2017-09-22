@@ -1,5 +1,26 @@
 'use strict';
 
+$(document).ready(function(){
+
+    $('.nav__item').hover(function () {
+        $('.nav__item-list',this).stop(true,true).slideDown(300);
+    }, function () {
+        $.data(this,'timer', setTimeout($.proxy(function() {
+            $('.nav__item-list',this).stop(true,true).slideUp(300);
+        }, this), 100));
+    });
+
+});
+
+// $(document).ready(function() {
+//     $('.nav__item').hover(
+//         function() {
+//             $('.nav__item-list').addClass('slideInDown'); // Добавляем класс bounce
+//         },
+//         function() {
+//             $('.nav__item-list').removeClass('slideInDown'); // Убираем класс
+//         }
+//     )})
 
 /*
 //map
