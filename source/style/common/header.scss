@@ -1,0 +1,580 @@
+.header {
+  position: fixed;
+  display: flex;
+  min-width: 100%;
+  height: 122px;
+  justify-content: space-between;
+  background: #fff;
+  z-index: 1;
+  //box-shadow: 0px 8px 10px -11px #878787;
+
+  @include smarts {
+    height: 100px !important;
+    padding: 0 5px;
+  }
+
+  @include phones {
+    height: 90px !important;
+  }
+}
+
+.index .header {
+  ///* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&0.9+70,0.85+73,0.83+76,0.8+79,0.71+82,0.65+85,0.6+88,0.55+91,0.5+94,0.25+97,0+100 */
+  //background: -moz-linear-gradient(top, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.9) 70%, rgba(255,255,255,0.85) 73%, rgba(255,255,255,0.83) 76%, rgba(255,255,255,0.8) 79%, rgba(255,255,255,0.71) 82%, rgba(255,255,255,0.65) 85%, rgba(255,255,255,0.6) 88%, rgba(255,255,255,0.55) 91%, rgba(255,255,255,0.5) 94%, rgba(255,255,255,0.25) 97%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+  //background: -webkit-linear-gradient(top, rgba(255,255,255,0.9) 0%,rgba(255,255,255,0.9) 70%,rgba(255,255,255,0.85) 73%,rgba(255,255,255,0.83) 76%,rgba(255,255,255,0.8) 79%,rgba(255,255,255,0.71) 82%,rgba(255,255,255,0.65) 85%,rgba(255,255,255,0.6) 88%,rgba(255,255,255,0.55) 91%,rgba(255,255,255,0.5) 94%,rgba(255,255,255,0.25) 97%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+  //background: linear-gradient(to bottom, rgba(255,255,255,0.9) 0%,rgba(255,255,255,0.9) 70%,rgba(255,255,255,0.85) 73%,rgba(255,255,255,0.83) 76%,rgba(255,255,255,0.8) 79%,rgba(255,255,255,0.71) 82%,rgba(255,255,255,0.65) 85%,rgba(255,255,255,0.6) 88%,rgba(255,255,255,0.55) 91%,rgba(255,255,255,0.5) 94%,rgba(255,255,255,0.25) 97%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  //filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
+
+}
+
+.header__left, .header__middle, .top-contacts__icons, .top-phone__link {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.header__left {
+  padding-left: 40px;
+  width: 33%;
+
+  @include laptops {
+    padding-left: 0;
+    width: 30%;
+  }
+
+  @include netbooks {
+    padding-left: 0;
+  }
+
+  @include smarts {
+    width: 15%;
+  }
+}
+
+.logo {
+  height: 100px;
+  width: 300px;
+  display: flex;
+
+  @include laptops {
+    width: 200px;
+  }
+
+  @include smarts {
+    width: 60px;
+    margin-top: -5px;
+  }
+
+  @include phones {
+    height: 70px;
+    width: 50px;
+  }
+
+  &:hover {
+    & .logo__pic {
+      fill: $green;
+    }
+
+    & .logo__pic_text {
+      fill: $green;
+    }
+
+    & .logo__pic_undertext {
+      fill: $orange;
+    }
+  }
+
+  &__block {
+    @include phones {
+      width: 50px;
+      height: 70px;
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.logo__pic {
+  height: 104px;
+  width: 80px;
+  fill: $orange;
+  margin-right: 10px;
+  transition: .5s;
+
+  @include laptops {
+    margin-right: 5px;
+  }
+
+  @include netbooks {
+    width: 50px;
+    margin: 0 15px;
+  }
+
+  @include smarts {
+    width: 40px;
+    margin-left: 10px;
+  }
+
+  @include phones {
+    height: 70px;
+    width: 50px;
+    margin-top: 2px;
+  }
+
+  &_text {
+    fill: $orange;
+    height: 40px;
+    width: 200px;
+    margin-bottom: 5px;
+    transition: .5s;
+
+    @include netbooks {
+      width: 170px;
+      height: 35px;
+    }
+
+    @include smarts {
+      display: none;
+    }
+  }
+
+  &_undertext {
+    fill: $black;
+    height: 18px;
+    width: 140px;
+    transition: .5s;
+
+    @include netbooks {
+      height: 16px;
+      width: 130px;
+    }
+
+    @include smarts {
+      display: none;
+    }
+  }
+}
+
+.header__middle {
+  width: 33%;
+  @include laptops {
+    padding-left: 0;
+    width: 40%;
+  }
+
+  @include netbooks {
+    margin-left: 20px;
+  }
+
+  @include lowres {
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 40px;
+    height: 10%;
+    top: 0;
+    right: 0;
+    position: fixed;
+  }
+}
+
+.header__right {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  padding-right: 40px;
+  width: 33%;
+  position: relative;
+
+  @include laptops {
+    padding-right: 15px;
+    width: 30%;
+  }
+
+  @include smarts {
+    padding: 0;
+    width: 85%;
+  }
+
+  @include phones {
+    width: 100px;
+  }
+}
+
+.top__block {
+  height: 20px;
+  width: 100%;
+}
+
+.bottom__block {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-direction: column;
+  height: 60%;
+  padding-right: 5px;
+  //margin-top: 5px;
+  width: 100%;
+
+  @include smarts {
+    margin-top: 2px;
+    justify-content: center;
+  }
+
+  @include phones {
+    justify-content: center;
+  }
+}
+
+.user__block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  @include smarts {
+    margin-left: -20px;
+  }
+}
+
+.login__block {
+
+}
+
+.login__icons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.login__icon {
+  height: 20px;
+  width: 100%;
+
+  &:hover {
+    .login__icon_pic {
+      fill: $orange;
+    }
+
+    & .login__icon_text {
+      color: $orange;
+    }
+  }
+
+  &_login {
+    margin-right: 10px;
+  }
+
+  &_pic {
+    height: 16px;
+    width: 16px;
+    fill: $green;
+    margin-right: 5px;
+    transition: .5s;
+
+    @include phones {
+      width: 12px;
+      height: 12px;
+      margin-right: 2px;
+    }
+  }
+
+  &_link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  &_text {
+    color: $grey;
+    transition: .5s;
+
+    @include phones {
+      font-size: 11px;
+      margin-top: 1px;
+    }
+  }
+}
+
+.socials__block {
+  width: 100%;
+  height: 100%;
+  //margin-right: 15px;
+
+  @include phones {
+    margin-right: 5px;
+  }
+}
+
+.social-icons {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  height: 100%;
+  margin-top: 3px;
+
+  @include phones {
+    margin-top: -1px;
+  }
+}
+
+.social-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 16px;
+  width: 16px;
+  margin-right: 10px;
+  position: relative;
+
+  @include phones {
+    width: 12px;
+    height: 12px;
+    margin-right: 5px;
+  }
+
+  &:hover {
+
+    & .social-icon__pic {
+      opacity: 1;
+
+      &_vk {
+        fill: #4F75A3;
+      }
+
+      &_fb {
+        fill: #1E3F7D;
+      }
+
+      &_in {
+        fill: #7A1316;
+      }
+
+      &_sh {
+        fill: $black;
+      }
+    }
+  }
+}
+
+.social-icon__pic {
+  width: 16px;
+  height: 16px;
+  fill: $light-grey;
+  transition: .5s;
+  opacity: .3;
+
+  @include phones {
+    width: 12px;
+    height: 12px;
+  }
+
+  &_vk {
+    height: 20px;
+    width: 20px;
+
+    @include phones {
+      width: 14px;
+      height: 14px;
+      margin-top: 2px;
+    }
+  }
+}
+
+.top-contacts {
+  @include smarts {
+    display: none;
+  }
+}
+
+.top-contacts__icon {
+  height: 20px;
+  width: 20px;
+  margin-left: 10px;
+}
+
+.phone-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  height: 100%;
+
+  @include laptops {
+    width: 70%;
+  }
+
+  @include smarts {
+    margin-bottom: 14px;
+  }
+}
+
+.top-phone {
+  height: 100%;
+
+  &__link {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.top-phone__pic, .top-phone__text {
+  transition: .5s;
+}
+
+.top-phone__pic {
+  height: 20px;
+  width: 20px;
+  margin-right: 16px;
+  fill: $black;
+
+  @include laptops {
+    //height: 15px;
+    //width: 15px;
+  }
+
+  @include smarts {
+    height: 20px;
+    width: 20px;
+  }
+
+  @include phones {
+    height: 13px;
+    width: 13px;
+  }
+}
+
+.top-phone__text {
+  font-size: 30px;
+  @include roboto(bold);
+  color: $orange;
+  white-space: nowrap;
+
+  @include laptops {
+    //font-size: 20px;
+  }
+
+  @include smarts {
+    font-size: 23px;
+  }
+}
+
+.top-phone__link:hover .top-phone__text {
+  color: $green;
+}
+
+.top-phone__link:hover .top-phone__pic {
+  fill: $green;
+}
+
+.top-contacts__icons {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 100%;
+  //padding: 10px 0;
+
+  @include laptops {
+    margin-left: 12px;
+  }
+
+  @include smarts {
+    align-items: center;
+  }
+
+  @include phones {
+    align-items: flex-start;
+  }
+}
+
+.top-contacts__link:hover .top-contacts__pic {
+  opacity: 1;
+  fill: $orange;
+}
+
+.top-contacts__icon {
+  margin-left: 15px;
+
+  @include smarts {
+    margin-bottom: 14px;
+  }
+}
+
+.top-contacts__pic {
+  fill: $green;
+  height: 20px;
+  width: 20px;
+  transition: .5s;
+
+  &_vk {
+    height: 24px;
+    width: 24px;
+    margin-top: -2px;
+  }
+
+  &_skype {
+    height: 19px;
+    width: 19px;
+    margin-top: 1px;
+  }
+}
+
+.search {
+  position: relative;
+}
+
+.search__block {
+  display: block;
+  position: relative;
+  height: 32px;
+  width: 220px;
+  margin-top: 15px;
+
+  @include laptops {
+    width: 190px;
+  }
+
+  @include netbooks {
+    //width: 200px;
+  }
+
+  @include smarts {
+    height: 26px;
+    width: 160px;
+    margin-top: 8px;
+  }
+  @include phones {
+    margin-top: 5px;
+  }
+
+}
+
+.search__line {
+  position: absolute;
+  display: block;
+  border-radius: 5px;
+  height: 100%;
+  width: 100%;
+  border: 1px solid $grey;
+}
+
+.search__pic {
+  display: block;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  height: 15px;
+  width: 15px;
+  transform: translateY(-50%) rotate(90deg);
+  fill: orange;
+
+  &:hover {
+    opacity: .5;
+  }
+}

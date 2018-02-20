@@ -1,0 +1,30 @@
+.form1
+    .form1__closer
+    .form__title Вызвать мастера
+    form.order-form-master(action="assets/php/mail.php", method="post")
+        label.input-block
+            input.input-area(type="text", name="name", placeholder="Ваши ФИО:")
+        label.input-block
+            input.input-area.phone-mask(type="text", name="phone", placeholder="Телефон для связи: +79229253435")
+        label.input-block
+            textarea.comments(name="comments", placeholder="Комментарии:")
+        //label.input-radio
+        //    input.radio(name="change", type="radio")
+        //label.input-check
+        //    input.radio(name="callback", type="checkbox", checked)
+        input.order_btn#submit(name="", type="submit", value="Заказать")
+        input.reset_btn(name="", type="reset", value="Очистить")
+.form2
+    .form2__closer
+    .form__title Заказать запчасти
+    form.order-form-parts(action="assets/php/mailer.php", method="post", enctype="multipart/form-data")
+        label.input-block
+            input.input-area(type="text", name="name", placeholder="Ваши ФИО:")
+        label.input-block
+            input.input-area.phone-mask(type="text", name="phone", placeholder="Телефон для связи: +79229253435")
+        label.input-block
+            textarea.comments(name="comments", placeholder="Комментарии:")
+        input.order_btn#submit(name="", type="submit", value="Заказать")
+        input.reset_btn(name="", type="reset", value="Очистить")
+.result#result
+.error

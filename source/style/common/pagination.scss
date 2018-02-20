@@ -1,0 +1,44 @@
+.pages {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pagination a, .page-trigger a {
+  @include gotham(light);
+  color: #464646;
+  font-size: 18px;
+  transition: .3s;
+
+  &:hover {
+    color: $orange;
+  }
+}
+
+.page-trigger {
+  margin-right: 7px;
+  cursor: pointer;
+
+  &.checked .page-trigger__link {
+    color: $orange;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.prev-trigger__pic, .next-trigger__pic {
+  height: 12px;
+  width: 12px;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: .3s;
+
+  &:hover {
+    fill: $orange;
+  }
+}
+
+.next-trigger__pic {
+  transform: rotate(180deg);
+}

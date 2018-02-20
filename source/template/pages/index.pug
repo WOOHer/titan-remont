@@ -1,0 +1,20 @@
+extends ../_template
+
+block variables
+    - var title = 'Cервисный центр "Прометей"'
+
+block content
+    .wrapper.index
+        include ../common/_top-bar
+        include ../common/_header
+        include ../sections/_slider-block
+        include ../sections/_service-block
+        include ../sections/_feedbacks-block
+        include ../sections/_video-block
+        include ../sections/_brands-block
+        include ../sections/_articles-block
+        include ../sections/_contacts-block
+        include ../articles/_mobil
+        include ../common/_forms
+    include ../common/_footer
+

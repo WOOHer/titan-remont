@@ -1,0 +1,92 @@
+//.openup {
+//  width: 1%;
+//  height: 1%;
+//  position: fixed;
+//  left: 0;
+//  top: 0;
+//}
+
+.openup__mobile,
+.openup__apple,
+.openup__comp,
+.openup__esig,
+.openup__giro,
+.openup__bit {
+  display: none;
+  position: fixed;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+  max-height: 70%;
+  height: 100%;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow-y: auto;
+  background: #ffffff;
+  //border: 1px solid #000;
+  border-radius: 15px 0 0 15px;
+  padding: 20px;
+  box-shadow: 0 0 10px 1px #878787;
+  z-index: 3;
+
+  &.active {
+    display: flex;
+  }
+
+  @include netbooks {
+    width: 70%;
+  }
+
+  @include lowres {
+    width: 75%;
+  }
+
+  @include middle {
+    width: 80%;
+  }
+
+  @include tablets {
+    width: 85%;
+  }
+
+  @include smarts {
+    width: 95%;
+    margin-top: 80px;
+  }
+
+  @include phones {
+    width: 98%;
+    border-radius: 0;
+  }
+
+  @include iphones {
+    height: 80%;
+    margin-top: 0;
+  }
+}
+
+.article {
+  &__closer {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    cursor: pointer;
+    z-index: 2;
+
+    &.active {
+      display: block;
+    }
+  }
+}
+
+.row__inner-line {
+  background: $orange;
+  text-align: center;
+}
+
+
+

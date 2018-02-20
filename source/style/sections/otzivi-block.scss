@@ -1,0 +1,299 @@
+.otzivi {
+  overflow: hidden;
+  position: relative;
+  background: rgba(124, 123, 123, .6);
+  display: flex;
+  justify-content: center;
+
+  & .container {
+    width: 100%;
+  }
+}
+
+.title__otzivi {
+  @include phones {
+    line-height: 60px;
+  }
+}
+
+.otzivi__toggler {
+
+  &_left, &_right {
+    position: absolute;
+    top: 60%;
+    transform: translateZ(0);
+    z-index: 0;
+    cursor: pointer;
+
+    @include tablets {
+      display: none;
+    }
+  }
+
+  &_left {
+    left: 25px;
+
+    &:hover .otzivi__toggler_pic {
+      opacity: .5;
+    }
+  }
+
+  &_right {
+    right: 25px;
+    &:hover .otzivi__toggler_pic_rotated {
+      opacity: .5;
+    }
+  }
+
+  &_pic, &_pic_rotated {
+    transition: .5s;
+  }
+
+  &_pic {
+    height: 100px;
+    width: 100px;
+    fill: #ffffff;
+    opacity: .05;
+
+    @include middle {
+      height: 70px;
+      width: 70px;
+    }
+
+    &_rotated {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.otzivi__bg {
+  background-image: url(../img/paralax/feedbacks.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  filter: blur(5px);
+  z-index: -2;
+}
+
+.title__otzivi {
+  margin: 60px 0;
+
+  @include smarts {
+    margin: 20px 0;
+  }
+}
+
+.otzivi__container {
+  height: 780px;
+  width: 600px;
+  position: relative;
+  overflow: hidden;
+
+  @include middle {
+    width: 500px;
+  }
+
+  @include smarts {
+    width: 450px;
+    height: 500px;
+  }
+
+  @include phones {
+    width: 100%;
+    height: 350px;
+  }
+}
+
+.otzivi__items {
+  display: flex;
+  justify-content: flex-start;
+  position: absolute;
+  transition: transform .5s;
+  will-change: transform;
+  width: 10000px;
+  height: 100%;
+
+  @include phones {
+    width: 100%;
+  }
+}
+
+.otzivi__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+  max-height: 660px;
+  flex: none;
+  //margin: 0 10%;
+  overflow: hidden;
+  width: 600px;
+
+  @include middle {
+    width: 500px;
+  }
+
+  @include tablets {
+    max-height: 650px;
+  }
+
+  @include smarts {
+    width: 450px;
+  }
+
+  @include phones {
+    width: 100%;
+    height: 400px;
+  }
+}
+
+.ava {
+  height: 134px;
+  width: 134px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex: none;
+  margin-bottom: 30px;
+  position: relative;
+
+  @include smarts {
+    margin-bottom: 16px;
+  }
+
+  @include phones {
+    height: 60px;
+    width: 60px;
+  }
+}
+
+.otzivi__pic {
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.otzivi__name {
+  @include gotham (bold);
+  font-size: 36px;
+  color: #2d2b2b;
+  margin-bottom: 15px;
+
+  @include smarts {
+    font-size: 26px;
+    margin-bottom: 8px;
+  }
+
+  @include phones {
+    font-size: 20px;
+  }
+}
+
+.otzivi__date {
+  @include roboto(italic);
+  font-size: 14px;
+  color: $white;
+  margin-bottom: 26px;
+
+  @include smarts {
+    font-size: 12px;
+    margin-bottom: 14px;
+  }
+
+  @include phones {
+    font-size: 11px;
+  }
+}
+
+.otzivi__rate {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+
+  @include smarts {
+    padding-bottom: 0;
+  }
+}
+
+.rate__item {
+  margin-left: 5px;
+  display: flex;
+
+  &__pic {
+    height: 22px;
+    width: 22px;
+    fill: $orange;
+
+    @include smarts {
+      height: 18px;
+      width: 18px;
+    }
+
+    @include phones {
+      height: 16px;
+      width: 16px;
+    }
+  }
+}
+
+.otzivi__text {
+  text-align: center;
+  @include cormac (light);
+  color: #ffffff;
+  overflow: hidden;
+  font-size: 30px;
+  min-height: 210px;
+  height: 640px;
+  margin-top: 28px;
+
+  @include middle {
+    font-size: 26px;
+  }
+
+  @include smarts {
+    margin-top: 20px;
+    font-size: 16px;
+  }
+
+  @include phones {
+    font-size: 14px;
+  }
+}
+
+.leave-feedback-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $orange;
+  padding: 15px 20px;
+  border-radius: 10px;
+  @include gotham (regular);
+  font-size: 23px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: .5s;
+  margin-bottom: 90px;
+  margin-top: 72px;
+
+  @include middle {
+    margin-bottom: 70px;
+    margin-top: 50px;
+    font-size: 20px;
+    padding: 12px 18px;
+  }
+
+  @include smarts {
+    margin-bottom: 50px;
+    margin-top: 20px;
+    font-size: 18px;
+    padding: 10px 15px;
+  }
+
+  &:hover {
+    background: $brown;
+    color: rgba(255, 255, 255, .5);
+  }
+}

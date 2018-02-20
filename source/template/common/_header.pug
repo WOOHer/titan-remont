@@ -1,0 +1,80 @@
+section.header#header
+    .header__left
+        a(href="/index.html" title="Главная").logo
+            .logo__block
+                svg.logo__pic
+                    use(xlink:href="./assets/img/sprite.svg#logo-graph")
+            .logo__text
+                svg.logo__pic_text
+                    use(xlink:href="./assets/img/sprite.svg#logo-text")
+                svg.logo__pic_undertext
+                    use(xlink:href="./assets/img/sprite.svg#logo-undertext")
+    .header__middle
+        include _nav
+    .header__right
+        //.top_block
+        //    .user__block
+        //        .socials__block
+        //            ul.social-icons
+        //                li.social-icon
+        //                    a(href="https://vk.com/clubprometey43" target="_blank" title="Наша группа Вконтакте").social-icon__link
+        //                        svg.social-icon__pic.social-icon__pic_vk
+        //                            use(xlink:href="./assets/img/sprite.svg#kon")
+        //                li.social-icon
+        //                    a(href="#" title="Наша группа в Фейсбук").social-icon__link
+        //                        svg.social-icon__pic.social-icon__pic_fb
+        //                            use(xlink:href="./assets/img/sprite.svg#fb")
+        //                li.social-icon
+        //                    a(href="#" title="Наша страница в Инстаграм").social-icon__link
+        //                        svg.social-icon__pic.social-icon__pic_in
+        //                            use(xlink:href="./assets/img/sprite.svg#in")
+                        //li.social-icon
+                        //    a.social-icon__link.social-icon__link_share(href="#" title="Поделиться")
+                        //        svg.social-icon__pic.social-icon__pic_sh
+                        //            use(xlink:href="./assets/img/sprite.svg#sh")
+        //        .login__icons
+        //            .login__icon.login__icon_login
+        //                a(href="#" title="Вход").login__icon_link
+        //                    svg.login__icon_pic
+        //                        use(xlink:href="./assets/img/sprite.svg#login")
+        //                    .login__icon_text Вход
+        //            .login__icon.login__icon_register
+        //                a(href="#" title="Регистрация").login__icon_link
+        //                    svg.login__icon_pic
+        //                        use(xlink:href="./assets/img/sprite.svg#reg")
+        //                    .login__icon_text Регистрация
+        .bottom__block
+            .phone-block
+                .top-phone
+                    a.top-phone__link(href="tel:98332450303")
+                        svg.top-phone__pic
+                            use(xlink:href="./assets/img/sprite.svg#ph")
+                        .top-phone__text 8(8332)45-03-03
+                .search
+                    .nav__mini
+                        //span.nav__mini_headline меню
+                        .nav__mini_line
+                        .nav__mini_line.nav__mini_line_two
+                        .nav__mini_line.nav__mini_line_three
+                    //form.search__block(method="get" action="/search" target="_parent")
+                    //    input.search__line(name="search" value="" type="text" placeholder="Поиск по сайту")
+                    //    svg.search__pic
+                    //        use(xlink:href="./assets/img/sprite.svg#search")
+            ul.top-contacts__icons
+                li.top-contacts__icon
+                    a.top-contacts__link(href="https://vk.com/clubprometey43" target="_blank" title="Наша группа Вконтакте")
+                        svg.top-contacts__pic.top-contacts__pic_vk
+                            use(xlink:href="./assets/img/sprite.svg#kon")
+                li.top-contacts__icon
+                    a.top-contacts__link(href="mailto:info@prometey43.com" title="Напишите нам")
+                        svg.top-contacts__pic
+                            use(xlink:href="./assets/img/sprite.svg#mail")
+                li.top-contacts__icon
+                    a.top-contacts__link(href="skype:live:dmitriyah?call" title="Связаться по Skype")
+                        svg.top-contacts__pic.top-contacts__pic_skype
+                            use(xlink:href="./assets/img/sprite.svg#skype")
+                li.top-contacts__icon
+                    a.top-contacts__link(href="tel:88332450303" title="Позвонить")
+                        svg.top-contacts__pic
+                            use(xlink:href="./assets/img/sprite.svg#callback")
+

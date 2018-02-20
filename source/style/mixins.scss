@@ -6,7 +6,7 @@
 
 //breakpoints
 @mixin laptops() {
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1170px) {
     @content;
   }
 }
@@ -23,8 +23,20 @@
   }
 }
 
+@mixin middle () {
+  @media screen and (max-width: 900px) {
+    @content;
+  }
+}
+
 @mixin tablets() {
   @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin smarts() {
+  @media screen and (max-width: 600px) {
     @content;
   }
 }
@@ -41,10 +53,83 @@
   }
 }
 
+
 //centronizer
 @mixin centrize() {
-  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+
+//fonts
+@mixin ruble($style : regular) {
+  @if $style == regular {
+    font-family: 'als_rublregular', Arial, sans-serif;
+  }
+}
+
+@mixin gotham($style : regular) {
+  @if $style == regular {
+    font-family: 'GothamPro', Helvetica, Arial, sans-serif;
+  }
+
+  @if $style == bold {
+    font-family: 'GothamPro-Bold', Helvetica, Arial, sans-serif;
+  }
+
+  @if $style == light {
+    font-family: 'GothamPro-Light', Helvetica, Arial, sans-serif;
+  }
+
+  @if $style == medium {
+    font-family: 'GothamPro-Medium', Helvetica, Arial, sans-serif;
+  }
+}
+
+@mixin arch($style : regular) {
+  @if $style == regular {
+    font-family: 'archangelskregular', Helvetica, Arial, sans-serif;
+  }
+}
+
+@mixin cormac($style : regular) {
+  @if $style == bold {
+    font-family: 'cormacblack', Helvetica, Arial, sans-serif;
+  }
+
+  @if $style == light {
+    font-family: 'cormacextra_light', Helvetica, Arial, sans-serif;
+  }
+}
+
+
+@mixin roboto($style : regular) {
+  @if $style == regular {
+    font-family: 'robotoregular', Helvetica, Arial, sans-serif;
+  }
+
+  @if $style == medium-italic {
+    font-family: 'robotomedium_italic', Helvetica, Arial, sans-serif;
+  }
+
+  @if $style == medium {
+    font-family: 'robotomedium', Helvetica, Arial, sans-serif;
+  }
+
+  @if $style == light-italic {
+    font-family: 'robotolight_italic', Helvetica, Arial, sans-serif;
+  }
+
+  @if $style == light {
+    font-family: 'robotolight', Helvetica, Arial, sans-serif;
+  }
+
+  @if $style == italic {
+    font-family: 'robotoitalic', Helvetica, Arial, sans-serif;
+  }
+
+  @if $style == bold {
+    font-family: 'robotoblack', Helvetica, Arial, sans-serif;
+  }
 }

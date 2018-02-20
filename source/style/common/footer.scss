@@ -1,0 +1,334 @@
+.footer {
+  display: flex;
+  flex-direction: nowrap;
+  justify-content: center;
+  height: $footerh;
+  margin-top: -255px;
+  width: 100%;
+  box-shadow: 0px -8px 10px -11px #878787;
+  overflow: hidden;
+  position: relative;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fefefe+0,f7f7f7+22,f2f2f2+36,eaeaea+53,e8e8e8+61,e8e8e8+68,e8e8e8+68,e0e0e0+87,c8c8c8+100 */
+  background: rgb(254,254,254); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(254,254,254,1) 0%, rgba(247,247,247,1) 22%, rgba(242,242,242,1) 36%, rgba(234,234,234,1) 53%, rgba(232,232,232,1) 61%, rgba(232,232,232,1) 68%, rgba(232,232,232,1) 68%, rgba(224,224,224,1) 87%, rgba(200,200,200,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  rgba(254,254,254,1) 0%,rgba(247,247,247,1) 22%,rgba(242,242,242,1) 36%,rgba(234,234,234,1) 53%,rgba(232,232,232,1) 61%,rgba(232,232,232,1) 68%,rgba(232,232,232,1) 68%,rgba(224,224,224,1) 87%,rgba(200,200,200,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  rgba(254,254,254,1) 0%,rgba(247,247,247,1) 22%,rgba(242,242,242,1) 36%,rgba(234,234,234,1) 53%,rgba(232,232,232,1) 61%,rgba(232,232,232,1) 68%,rgba(232,232,232,1) 68%,rgba(224,224,224,1) 87%,rgba(200,200,200,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', endColorstr='#c8c8c8',GradientType=0 ); /* IE6-9 */
+
+  &.active {
+    position: fixed;
+    bottom: 0;
+    margin-top: 0;
+  }
+
+  @include tablets {
+    height: 300px;
+    margin-top: -280px;
+  }
+
+  @include smarts {
+    height: 340px;
+    margin-top: -260px;
+  }
+
+  @include phones {
+    height: 280px;
+    margin-top: -280px;
+  }
+
+  @include iphones {
+    height: 260px;
+    margin-top: -260px;
+  }
+}
+
+.footer .container {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+
+  @include tablets {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @include smarts {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.footer__left, .footer__right {
+  width: 47%;
+
+  @include tablets {
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+.footer__left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  @include middle {
+    width: 65%;
+  }
+
+  @include tablets {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @include smarts {
+    height: 100px;
+  }
+}
+
+.footer-logo {
+  margin-top: -25px;
+}
+
+.footer__right {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 43px;
+
+  @include middle {
+    width: 31%;
+  }
+
+  @include tablets {
+    width: 50%;
+    height: 100%;
+    padding-right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @include smarts {
+    height: 50%;
+  }
+}
+
+.footer-logo {
+  @include tablets {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__pic {
+      height: 80%;
+      width: 80%;
+    }
+  }
+
+  @include smarts {
+    height: 100%;
+  }
+
+  @include iphones {
+    &__pic {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+
+.footer-social__items {
+  display: flex;
+  //flex-wrap: nowrap;
+  justify-content: center;
+  margin-top: 17px;
+
+  @include tablets {
+    margin-top: 25px;
+  }
+}
+
+.footer-social__item {
+  margin-left: 15px;
+
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+.footer-socials__pic {
+  height: 24px;
+  width: 24px;
+  transition: .5s;
+
+  &:hover {
+    opacity: .5;
+  }
+}
+
+.copiright-block {
+
+  @include tablets {
+    display: none;
+  }
+}
+
+.copyright {
+  color: #7b7b7b;
+  @include gotham(regular);
+  font-size: 18px;
+
+  @include tablets {
+    font-size: 16px;
+  }
+}
+
+.copyright__pic {
+  height: 20px;
+}
+
+.footer-text {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 20px;
+
+  @include tablets {
+    align-items: center;
+    width: 50%;
+  }
+
+  @include smarts {
+    width: 100%;
+    margin-top: -20px;
+  }
+
+  &__item {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    & p {
+      margin-right: 10px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.footer-text__items {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 5px;
+
+  @include tablets {
+    align-items: center;
+  }
+}
+
+.footer-text__title {
+  @include roboto(black);
+  font-size: 22px;
+  color: $black;
+  text-align: right;
+  margin-bottom: 8px;
+
+  @include tablets {
+    font-size: 20px;
+    margin-bottom: 0;
+  }
+
+  @include iphones {
+    font-size: 18px;
+  }
+}
+
+.footer-text__item {
+  display: flex;
+  @include roboto(regular);
+  color: #5c5c5c;
+  font-size: 16px;
+  line-height: 26px;
+
+  @include tablets {
+    flex-direction: row;
+    justify-content: space-between;
+    line-height: 20px;
+  }
+
+  @include smarts {
+    margin-left: 5px;
+    flex-wrap: nowrap;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  @include iphones {
+    font-size: 14px;
+  }
+}
+
+.footer-text__item p {
+  @include tablets {
+    font-size: 18px !important;
+  }
+}
+
+.backtotop {
+  width: 76px;
+  height: 100%;
+  background: $orange;
+  position: relative;
+  transition: .5s;
+
+  @include tablets {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    border-radius: 50%;
+    background: rgba(242, 141, 0, .5);
+  }
+
+  &:hover {
+    background: $brown;
+    opacity: 1;
+  }
+
+  &:before {
+    content: "";
+    display: block;
+    height: 40px;
+    width: 40px;
+    border: 3px solid rgba(255, 255, 255, 1);
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%) rotate(-45deg);
+    position: absolute;
+    margin-top: -5px;
+
+    @include tablets {
+      width: 15px;
+      height: 15px;
+    }
+  }
+}

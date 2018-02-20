@@ -1,0 +1,102 @@
+.article {
+  margin-top: 142px;
+
+  &__title {
+    font-size: 26px;
+    @include gotham(bold);
+
+    @include tablets {
+      font-size: 24px;
+    }
+
+    @include smarts {
+      font-size: 20px;
+    }
+
+    @include phones {
+      font-size: 16px;
+      text-align: center;
+    }
+  }
+}
+
+.article__headline, .article__content {
+  font-size: 22px;
+
+  @include tablets {
+    font-size: 20px;
+  }
+
+  @include smarts {
+    font-size: 18px;
+  }
+
+  @include phones {
+    font-size: 14px;
+  }
+}
+
+.article__headline {
+  font-weight: bold;
+  font-style: italic;
+  margin: 28px 0;
+
+  @include laptops {
+    margin: 28px 0;
+  }
+}
+
+.title__table {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 40px;
+
+  & p {
+    font-size: 18px;
+    @include gotham(bold);
+
+    @include phones {
+      font-size: 16px;
+    }
+  }
+}
+
+td h3 {
+  @include phones {
+    font-size: 18px;
+  }
+}
+
+td {
+  @include phones {
+    font-size: 14px;
+  }
+}
+
+//.content__pic {
+//  width: 380px;
+//  height: 260px;
+//  float: left;
+//  margin: 5px 10px 10px 0;
+//  overflow: hidden;
+//}
+//
+//.article__content {
+//}
+//
+//.content__pics {
+//  display: flex;
+//  justify-content: space-between;
+//
+//  &-itself {
+//    height: 180px;
+//    width: 270px;
+//    margin: 0 0 40px 0;
+//  }
+//}
+
+//.content__video {
+//  margin-top: 48px;
+//  margin-bottom: 2%!important;
+//}

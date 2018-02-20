@@ -1,0 +1,68 @@
+.brands {
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+  background: rgba(47, 141, 52, .17);
+
+  @include netbooks {
+    height: 100px;
+  }
+
+  @include smarts {
+    height: 70px;
+  }
+}
+
+marquee {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 150px;
+
+  @include netbooks {
+    height: 100px;
+  }
+
+  @include smarts {
+    height: 70px;
+  }
+}
+
+img.brand__item {
+  height: 60px;
+  margin-top: 20px;
+
+  @include netbooks {
+    height: 45px;
+  }
+
+  @include smarts {
+    height: 30px;
+  }
+}
+
+.brands__item {
+  height: 100px;
+  display: inline-block;
+
+  @include netbooks {
+    height: 85px;
+  }
+
+  @include smarts {
+    height: 70px;
+  }
+}
+
+.brand__item {
+  margin-left: 125px;
+
+  @include netbooks {
+    height: 90px;
+  }
+
+  @include smarts {
+    margin-left: 60px;
+  }
+}

@@ -1,0 +1,178 @@
+.feedbacks {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  &__list {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+}
+
+.sidebar__banner {
+  height: 100%;
+  width: 240px;
+  max-height: 340px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  flex: none;
+}
+
+.banner__pic {
+  width: 100%;
+  height: 100%;
+}
+
+.masters__item, .prices__item {
+  margin: 25px 0;
+  position: relative;
+  margin-left: 30px;
+  cursor: pointer;
+
+  &:hover p {
+    font-size: 28px;
+    @include gotham(bold);
+  }
+
+  &:hover:before {
+    width: 10px;
+    height: 10px;
+    background: $black;
+  }
+
+  &:hover:before .active {
+    width: 6px;
+    height: 6px;
+  }
+
+  & p {
+    @include gotham(regular);
+    font-size: 18px;
+    color: $black;
+    transition: .5s;
+  }
+
+  &.active p {
+    color: $orange;
+    font-size: 18px;
+    @include gotham(regular);
+  }
+
+  &:before {
+    content: "";
+    display: block;
+    width: 6px;
+    height: 6px;
+    background: $grey;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -30px;
+  }
+}
+
+.feedbacks__block {
+  margin-top: 26px;
+  display: flex;
+  flex-direction: column;
+}
+
+.user__pic {
+  height: 68px;
+  width: 68px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.user__ava {
+  position: absolute;
+}
+
+.feedback__block {
+  flex: 1;
+  height: 100%;
+}
+
+.feedback__headline {
+  background: rgba(0, 84, 166, .1);
+  height: 36px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.feedback__headline__text {
+  @include gotham(bold);
+  font-size: 22px;
+  padding-left: 16px;
+}
+
+.feedback__rate {
+  display: flex;
+  background: rgba(0, 84, 166, .1);
+  height: 36px;
+  align-items: center;
+  padding: 0 23px;
+}
+
+.rate__star {
+  margin-right: 8px;
+  margin-top: 4px;
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 16px;
+
+  & .checked {
+    fill: $orange;
+    stroke: none;
+  }
+}
+
+.star__pic {
+  width: 22px;
+  height: 22px;
+}
+
+.feedbacks__item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 70px;
+}
+
+.user_block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 30px 0 58px;
+}
+
+.user__name {
+  @include gotham(bold);
+  font-size: 16px;
+}
+
+.user__city, .feedback__text, .feedbacks__date {
+  @include gotham(regular);
+  font-style: italic;
+}
+
+.user__city {
+  font-size: 14px;
+}
+
+.feedbacks__date {
+  font-size: 12px;
+}
+
+.feedback__text {
+  font-size: 18px;
+  font-style: normal;
+}

@@ -1,0 +1,28 @@
+section.work-process#work-process
+    .container
+        h2.title__work-process.title Рабочий процесс
+        .video-toggler__up(title="Вверх")
+            svg.video-toggler__pic.video-toggler__pic_up
+                use(xlink:href="./assets/img/sprite.svg#arrow-up")
+        .work-process__content
+            .main__screen
+                .main__video
+                    iframe(width="auto" height="auto" src="https://www.youtube.com/embed/JzLGXZ5PmOY?rel=0" name="tab" frameborder="0" allowfullscreen)
+            .dop__screen
+                ul.video__items
+                    li.video__item
+                        a(href="https://www.youtube.com/embed/RaqvoDV-78A?rel=0&autoplay=1" target="tab")
+                            .video__bg
+                                img.video__pic(src="assets/img/articles/sim.jpg")
+                    li.video__item
+                        a(href="https://www.youtube.com/embed/vU-zequXzew?rel=0&autoplay=1" target="tab")
+                            img.video__pic(src="assets/img/articles/comp.jpg")
+                    li.video__item
+                        a(href="https://www.youtube.com/embed/68f-nr7Uin8?rel=0&autoplay=1" target="tab")
+                            img.video__pic(src="assets/img/articles/office.jpg")
+                    li.video__item
+                        a(href="https://www.youtube.com/embed/ENKzfdssP8k?rel=0&autoplay=1" target="tab")
+                            img.video__pic(src="assets/img/articles/apple.jpg")
+        .video-toggler__down(title="Вниз")
+            svg.video-toggler__pic.video-toggler__pic_down
+                use(xlink:href="./assets/img/sprite.svg#arrow-down")

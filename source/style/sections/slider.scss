@@ -1,0 +1,313 @@
+.slider {
+  margin-top: 122px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include smarts {
+    margin-top: 120px;
+  }
+
+  @include phones {
+    margin-top: 90px;
+  }
+
+  &__block {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__pic {
+    max-height: 600px;
+    width: 100%;
+
+    @include netbooks {
+      width: 110%;
+    }
+
+    @include lowres {
+      width: 120%;
+    }
+
+    @include middle {
+      width: 130%;
+    }
+
+    @include tablets {
+      width: 150%;
+    }
+
+    @include smarts {
+      width: 200%;
+    }
+
+    @include iphones {
+      width: 220%;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//.slider__container {
+//  height: 100%;
+//  width: 100%;
+//  position: relative;
+//  overflow: hidden;
+//  display: flex;
+//  justify-content: center;
+//  align-items: center;
+//
+//  @include laptops {
+//    height: 550px;
+//  }
+//
+//  @include netbooks {
+//    height: 500px;
+//  }
+//
+//  @include lowres {
+//    height: 450px;
+//  }
+//
+//
+//  @include tablets {
+//    height: 350px;
+//  }
+//
+//  @include smarts {
+//    height: 300px;
+//  }
+//
+//  @include phones {
+//    height: 260px;
+//  }
+//}
+//
+//&__items {
+//  display: flex;
+//  justify-content: space-between;
+//  align-items: center;
+//  transition: transform .5s;
+//  will-change: transform;
+//  width: 100000px;
+//  overflow: hidden;
+//  height: 100%;
+//}
+//
+//&__item {
+//  width: 100%;
+//  height: 600px;
+//  flex: none;
+//  display: flex;
+//  justify-content: center;
+//  align-items: center;
+//  position: relative;
+//}
+//.slider__link {
+//  background-position: left;
+//  background-size: cover;
+//  position: absolute;
+//  width: 100%;
+//  height: 100%;
+//}
+//
+//.slider__link1 {
+//  background: url(../img/slider/mobi.jpg) no-repeat;
+//}
+//
+//.slider__link2 {
+//  background: url(../img/slider/sig.jpg) no-repeat;
+//}
+//
+//.slider__link3 {
+//  background: url(../img/slider/akk.jpg) no-repeat;
+//}
+//
+//.slider__toggler {
+//  cursor: pointer;
+//
+//  &:hover .slider__toggler_pic {
+//    opacity: .5;
+//  }
+//
+//  &_left, &_right {
+//    position: absolute;
+//    top: 50%;
+//    transform: translateY(-40%) translateZ(0);
+//    z-index: 999999;
+//  }
+//
+//  &_left {
+//    left: -2px;
+//
+//    @include netbooks {
+//      left: 15px;
+//    }
+//
+//    @include lowres {
+//      left: 0;
+//    }
+//  }
+//
+//  &_right {
+//    right: -2px;
+//
+//    @include netbooks {
+//      right: 15px;
+//    }
+//
+//    @include lowres {
+//      right: 0;
+//    }
+//
+//    @include phones {
+//      right: 12px;
+//      margin-top: 12px;
+//    }
+//  }
+//
+//  &_pic, &_pic_rotated {
+//    transition: .5s;
+//  }
+//
+//  &_pic {
+//    height: 100px;
+//    width: 100px;
+//    fill: #ffffff;
+//    opacity: .05;
+//
+//    &_rotated {
+//      transform: rotate(180deg);
+//    }
+//
+//    @include netbooks {
+//      height: 60px;
+//      width: 60px;
+//    }
+//
+//    @include tablets {
+//      height: 40px;
+//      width: 40px;
+//      opacity: .08;
+//    }
+//
+//    @include phones {
+//      height: 24px;
+//      width: 24px;
+//    }
+//  }
+//}
+//
+////.slider-bg {
+////  display: block;
+////  height: 100%;
+////  width: 100vw;
+////  background: #000;
+////  position: absolute;
+////  opacity: .4;
+////  z-index: 1;
+////}
+//
+//.slider__content {
+//  position: absolute;
+//  width: 400px;
+//  margin-top: 130px;
+//  left: 21%;
+//  z-index: 2;
+//  overflow: hidden;
+//  border-radius: 15px;
+//  padding: 10px 20px;
+//  background: rgba(0,0,0,.4);
+//
+//  @include tablets {
+//    left: 3%;
+//  }
+//
+//
+//  @include netbooks {
+//    left: 50%;
+//    transform: translateX(-50%);
+//    margin-top: 110px;
+//  }
+//
+//  @include lowres {
+//    left: 8%;
+//    transform: translateX(0);
+//    margin-top: 80px;
+//  }
+//
+//  @include tablets {
+//    left: 8%;
+//    transform: translateX(0);
+//    margin-top: 60px;
+//  }
+//
+//  @include smarts {
+//    width: 350px;
+//    margin-top: 50px;
+//  }
+//
+//  @include phones {
+//    margin-top: 20px;
+//  }
+//}
+//
+//.slider__text, .slider__headline {
+//  color: $white;
+//}
+//
+//.slider__headline {
+//  text-transform: none;
+//  font-size: 45px;
+//  margin-bottom: 10px;
+//
+//  @include netbooks {
+//    font-size: 35px;
+//  }
+//
+//  @include tablets {
+//    font-size: 27px;
+//    margin-bottom: 5px;
+//  }
+//
+//  @include smarts {
+//    font-size: 24px;
+//  }
+//}
+//
+//.slider__text {
+//  font-size: 18px;
+//  @include cormac(light);
+//  margin-bottom: 30px;
+//
+//  @include netbooks {
+//    font-size: 16px;
+//  }
+//
+//  @include tablets {
+//    font-size: 15px;
+//    margin-bottom: 20px;
+//  }
+//
+//  @include smarts {
+//    font-size: 13px;
+//  }
+//}
+

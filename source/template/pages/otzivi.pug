@@ -1,0 +1,18 @@
+extends ../_template
+
+block variables
+    - var title = 'Блог сервисного центра "Прометей"'
+
+block content
+    .wrapper#wrapper
+        include ../common/_top-bar
+        include ../common/_header
+        .article
+            .container
+                include ../common/_breadcrumbs
+                include ../common/_article-header
+                include ../sections/_otzivi
+                include ../common/_pagination
+                include ../common/_article-footer
+    include ../common/_footer
+

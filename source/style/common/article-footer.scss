@@ -1,0 +1,56 @@
+.article__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 23px;
+  margin-top: 60px;
+  width: 100%;
+}
+
+//.callback-icon {
+//  position: fixed;
+//  left: 20px;
+//  bottom: 40px;
+//  z-index: 100000;
+//
+//  &.active {
+//    top: 290px;
+//  }
+//}
+
+.callback-icon__pic {
+  width: 70px;
+  height: 70px;
+  transition: .5s;
+
+  &:hover {
+    opacity: .5;
+  }
+}
+
+.share-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  & p {
+    @include gotham(medium);
+    font-size: 20px;
+    margin-top: -7px;
+  }
+}
+
+.share-icon {
+  margin-left: 35px;
+
+  &__pic {
+    width: 34px;
+    height: 34px;
+    transition: .5s;
+
+    &:hover {
+      fill: #000;
+      opacity: .5;
+    }
+  }
+}

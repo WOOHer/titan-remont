@@ -1,0 +1,163 @@
+//.top-bar {
+//  display: flex;
+//  justify-content: space-between;
+//  background: #000;
+//  height: 36px;
+//  width: 100%;
+//
+//  &__menu {
+//    display: flex;
+//    margin: 0 0 0 40px;
+//    justify-content: space-between;
+//    align-items: center;
+//
+//    @include laptops {
+//      margin-left: 20px;
+//    }
+//
+//    @include smarts {
+//      margin-left: 10px !important;
+//    }
+//
+//    @include netbooks {
+//      margin-left: 20px;
+//    }
+//  }
+//}
+//
+//.top-bar__menu-item {
+//  margin-right: 28px;
+//
+//  &:last-child {
+//    margin-right: 0;
+//  }
+//
+//  @include tablets {
+//    margin-right: 5px;
+//  }
+//
+//  @include smarts {
+//    margin-right: -5px;
+//  }
+//}
+//
+//.menu-item__link {
+//  color: #fff;
+//  transition: 0.5s;
+//  white-space: nowrap;
+//
+//  @include tablets {
+//    margin-right: 10px;
+//    font-size: 12px;
+//  }
+//
+//  @include smarts {
+//    font-size: 11px;
+//  }
+//
+//  &:hover {
+//    color: $orange;
+//  }
+//}
+
+//.social-icon__pic {
+//  fill: #fff;
+//  height: 16px;
+//  width: 30px;
+//  opacity: .5;
+//  transition: .5s;
+//
+//  @include tablets {
+//    height: 14px;
+//    width: 14px;
+//  }
+//
+//  &:hover {
+//    fill: $orange;
+//    opacity: 1;
+//  }
+//}
+
+//.social-icons, .user-block, .top-bar__right {
+//  display: flex;
+//  height: 100%;
+//  align-items: center;
+//  z-index: 999;
+//}
+//
+//.social-icon {
+//  height: 100%;
+//  display: flex;
+//  align-items: center;
+//  margin-top: 6px;
+//
+//  @include tablets {
+//    margin-left: 4px;
+//
+//    &:last-child {
+//      margin-left: 8px;
+//    }
+//
+//    &:first-child {
+//      margin-left: 0;
+//    }
+//  }
+//}
+//
+//.user__block {
+//  margin-right: 40px;
+//
+//  @include laptops {
+//    margin-right: 30px;
+//  }
+//
+//  @include tablets {
+//    margin-right: 10px;
+//  }
+//
+//  &__item {
+//    height: 100%;
+//    display: flex;
+//    margin-left: 24px;
+//
+//    @include tablets {
+//      margin-left: 10px;
+//    }
+//  }
+//
+//  &__link {
+//    display: flex;
+//    height: 100%;
+//    align-items: center;
+//    margin-top: 3px;
+//  }
+//}
+//
+//.user-block__pic {
+//  width: 20px;
+//  height: 14px;
+//  fill: $orange;
+//  margin-top: -4px;
+//}
+//
+//.user-block__text {
+//  color: $orange;
+//  display: flex;
+//  align-items: center;
+//  margin-top: -2px;
+//  font-size: 12px;
+//
+//  @include smarts {
+//    font-size: 11px;
+//  }
+//}
+//
+//.user-block__link {
+//  &:hover {
+//    & .user-block__text, .user-block__pic {
+//      color: #fff;
+//      fill: #fff;
+//      transition: .5s;
+//    }
+//  }
+//}

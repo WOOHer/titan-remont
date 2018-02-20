@@ -1,0 +1,124 @@
+.articles .container {
+  padding: 96px 10px;
+
+  @include laptops {
+    padding: 86px 20px;
+  }
+
+  @include middle {
+    padding: 80px 30px;
+  }
+
+  @include lowres {
+    padding: 74px 20px;
+  }
+
+  @include smarts {
+    padding: 36px 10px 48px;
+  }
+}
+
+.articles {
+  &__content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+
+    @include middle {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+
+.articles__title {
+  border: 2px solid;
+  border-color: transparent;
+  border-bottom-color: #555;
+  width: 30%;
+  height: 80px;
+  line-height: 65px;
+
+  @include laptops {
+    height: 90px;
+    line-height: 40px;
+  }
+
+  @include lowres {
+    height: 85px;
+    line-height: 36px;
+  }
+
+  @include middle {
+    height: 60px;
+    line-height: 30px;
+  }
+
+  @include smarts {
+    padding: 20px 10px;
+    line-height: 42px;
+    width: 90%;
+  }
+
+  @include phones {
+    line-height: 20px;
+  }
+}
+
+.articles__text {
+  display: block;
+  //max-height: 225px;
+  overflow: hidden;
+  @include roboto(light);
+  font-size: 22px;
+  line-height: 28px;
+  margin-bottom: 40px;
+  margin-top: 40px;
+
+  @include laptops {
+    font-size: 20px;
+  }
+
+  @include lowres {
+    font-size: 19px;
+  }
+
+  @include smarts {
+    font-size: 18px;
+  }
+}
+
+.articles__btns {
+  display: flex;
+  justify-content: flex-end;
+
+  @include smarts {
+    justify-content: center;
+  }
+}
+
+.articles__btn {
+  align-self: flex-end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $orange;
+  padding: 10px 20px;
+  @include gotham(regular);
+  font-size: 16px;
+  color: #ffffff;
+  border-radius: 5px;
+  transition: .5s;
+
+  &:hover {
+    background: $brown;
+  }
+}

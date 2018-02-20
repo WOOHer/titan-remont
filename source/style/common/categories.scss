@@ -1,0 +1,94 @@
+.groups {
+  display: flex;
+  flex-direction: column;
+
+  & a {
+    text-decoration: none;
+    color: $black;
+  }
+}
+
+.promo-item, .article-item {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 114px;
+
+  &:first-child {
+    margin-top: 60px;
+  }
+
+  &__text {
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    height: 170px;
+
+    @include tablets {
+      height: 120px;
+    }
+
+    &.open {
+      overflow: visible;
+      height: auto;
+    }
+  }
+
+  &__text-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+  }
+
+  &__pic {
+    display: flex;
+    overflow: hidden;
+    flex: none;
+    height: 170px;
+    width: 170px;
+
+    @include tablets {
+      height: 120px;
+      width: 120px;
+    }
+  }
+
+  &__dots {
+    margin: 62px 6% 0 2.6%;
+
+    @include tablets {
+      margin-top: 39px;
+    }
+  }
+
+  &__headline {
+    @include arch(regular);
+    font-size: 30px;
+    line-height: 30px;
+    margin-bottom: 28px;
+
+    @include tablets {
+      font-size: 26px;
+      line-height: 26px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__content {
+    font-size: 20px;
+    height: 100%;
+
+    @include tablets {
+      font-size: 17px;
+    }
+  }
+}
+
+.dots__pic {
+  height: 47px;
+  width: 2px;
+  fill: $grey;
+}

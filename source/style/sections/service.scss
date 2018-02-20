@@ -1,0 +1,109 @@
+.service {
+  height: 100%;
+  padding: 60px 0 160px;
+
+  @include laptops {
+    padding: 40px 0 120px;
+  }
+
+  @include netbooks {
+    padding: 30px 0 90px;
+  }
+
+  @include smarts {
+    padding: 20px 0 80px;
+  }
+
+  & .container {
+    padding: 0;
+  }
+}
+
+.service__items {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 55px;
+
+  @include laptops {
+    margin-top: 40px;
+  }
+
+  @include netbooks {
+    margin-top: 23px;
+  }
+
+  @include tablets {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  @include smarts {
+    margin-top: 10px;
+  }
+}
+
+.service__item {
+  width: 360px;
+  height: 220px;
+  background-size: contain;
+  background-position: center;
+  margin: 10px 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.service__pic {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.service__link {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 10px 20px;
+  background: rgba(0, 0, 0, .5);
+  height: 100%;
+  top: 67%;
+  transition: .7s;
+  cursor: pointer;
+
+  &:hover {
+    top: 0;
+    padding: 15px;
+  }
+
+  &:hover .service__item-headline {
+    color: #1ff409;
+    font-weight: bold;
+  }
+}
+
+.service__item-headline {
+  @include gotham(light);
+  color: #fff;
+  font-size: 24px;
+  text-align: center;
+  line-height: 27px;
+  margin-bottom: 15px;
+
+  @include tablets {
+    font-size: 20px;
+  }
+}
+
+.service__item-text {
+  @include cormac(light);
+  font-size: 20px;
+  color: #ffffff;
+  line-height: 26px;
+  text-align: center;
+
+  @include tablets {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}

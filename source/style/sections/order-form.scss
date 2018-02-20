@@ -1,0 +1,179 @@
+.order-form {
+  position: fixed;
+  top: 132px;
+  right: 10px;
+  z-index: 999999;
+
+  &__first {
+    top: 42%;
+  }
+
+  @include netbooks {
+    right: 20px;
+  }
+
+  @include tablets {
+    right: 10px;
+  }
+
+  @include smarts {
+    right: 8px;
+    top: 128px;
+  }
+
+  @include phones {
+    top: 100px;
+  }
+}
+
+.slider .order-form {
+  top: 17%;
+}
+
+.order-form__dropleft {
+  height: 74px;
+  background: rgba(162, 162, 162, .4);
+  font-size: 24px;
+  @include roboto(medium);
+  color: $white;
+  justify-content: flex-end;
+  padding: 0 20px 0 30px;
+  align-items: center;
+  white-space: nowrap;
+  display: none;
+  border-radius: 50px 0 0 50px;
+  transition: .3s;
+
+  @include netbooks {
+    height: 60px;
+    padding: 0 10px 0 20px;
+  }
+
+  @include tablets {
+    height: 42px;
+    padding: 0 5px 0 10px;
+    background: rgba(162, 162, 162, 1);
+  }
+
+  @include smarts {
+    height: 36px;
+  }
+}
+
+.order-form__items {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.order-form__item {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3px;
+
+  & .order-form__link {
+    color: $white;
+    line-height: 28px;
+    transition: .5s;
+
+    @include netbooks {
+      font-size: 16px;
+    }
+
+    @include tablets {
+      font-size: 14px;
+    }
+
+    @include smarts {
+      font-size: 12px;
+    }
+
+    &:hover {
+      opacity: .4;
+
+      @include tablets {
+        opacity: 1;
+        color: $green;
+      }
+    }
+  }
+
+  &:hover .order-form__pic {
+      fill: $green;
+  }
+
+  &:hover .order-form__dropleft {
+    display: flex;
+    animation-name: slideLeft;
+    animation-duration: .8s;
+    animation-timing-function: ease-in-out;
+    visibility: visible !important;
+  }
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.order-form__bg {
+  height: 74px;
+  width: 74px;
+  background: $orange;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  @include netbooks {
+    height: 60px;
+    width: 60px;
+  }
+
+  @include tablets {
+    height: 42px;
+    width: 42px;
+  }
+
+  @include smarts {
+    height: 36px;
+    width: 36px;
+  }
+
+  //&.active {
+  //  height: 30px;
+  //  width: 30px;
+  //}
+}
+
+.order-form__pic {
+  height: 44px;
+  width: 44px;
+  fill: #fff;
+  transition: .5s;
+
+  @include netbooks {
+    height: 34px;
+    width: 34px;
+  }
+
+  @include tablets {
+    height: 28px;
+    width: 28px;
+  }
+
+  @include smarts {
+    height: 22px;
+    width: 22px;
+  }
+
+  //&.active {
+  //  height: 44px;
+  //  width: 44px;
+  //}
+}

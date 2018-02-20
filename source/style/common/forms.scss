@@ -1,0 +1,152 @@
+.form1, .form2 {
+  display: none;
+  position: fixed;
+  flex-direction: column;
+  align-items: center;
+  @include centrize;
+  width: 400px;
+  height: 320px;
+  background: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 0 10px 1px #878787;
+
+  @include iphones {
+    width: 100%;
+    border-radius: 0;
+  }
+
+  &.active {
+    display: flex;
+  }
+
+  &__closer {
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: fixed;
+    left: 10px;
+    top: 20px;
+    cursor: pointer;
+
+    &:hover {
+      &:before, &:after {
+        background: $orange;
+      }
+    }
+
+    &:before, &:after {
+      background: #000000;
+      content: "";
+      display: block;
+      width: 20px;
+      height: 2px;
+      position: absolute;
+      transition: .3s;
+    }
+
+    &:before {
+      transform: rotate(45deg);
+    }
+
+    &:after {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.form__title {
+  @include arch(regular);
+  font-size: 26px;
+  color: $black;
+  margin-bottom: 10px;
+}
+
+form {
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  overflow: hidden;
+
+  & input {
+    border-style: groove;
+    @include roboto(light);
+  }
+}
+
+.input-area {
+  width: 100%;
+  margin-bottom: 10px;
+  height: 35px;
+  border-radius: 5px;
+}
+
+input, textarea {outline:none;}
+input:active, textarea:active {outline:none;}
+:focus {outline:none;}
+
+textarea {
+  width: 100%;
+  height: 80px;
+  padding: 10px;
+  border-radius: 5px;
+  resize: none;
+  margin-bottom: 20px;
+}
+
+textarea::-webkit-input-placeholder {
+  opacity: .4;
+  @include roboto(light);
+}
+
+textarea:-moz-placeholder {
+  opacity: .4;
+  @include roboto(light);
+}
+
+.order_btn, .reset_btn {
+  border-radius: 5px;
+  width: 100px;
+  height: 35px;
+  background: $green;
+  border-color: transparent;
+  cursor: pointer;
+  color: #fff;
+  @include gotham(light);
+  transition: .5s;
+  padding-bottom: 2px;
+
+  &:hover {
+    background: #81d685;
+  }
+}
+
+.reset_btn {
+  background: $brown;
+
+  &:hover {
+    background: $orange;
+  }
+}
+
+.result, .error {
+  display: none;
+  position: fixed;
+  width: 100px;
+  height: 50px;
+  top: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: green;
+
+  &.active {
+    display: block;
+  }
+}
+
+.error {
+  background: red;
+}

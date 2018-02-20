@@ -1,0 +1,62 @@
+.promo-item {
+  height: 170px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 114px;
+
+  &:first-child {
+    margin-top: 60px;
+  }
+
+  &__text {
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    height: 170px;
+
+    &.active {
+      overflow: visible;
+      //height: 100%;
+    }
+  }
+
+  &__text-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+  }
+
+  &__pic {
+    height: 170px;
+    width: 170px;
+    display: flex;
+    overflow: hidden;
+    flex: none;
+    margin-right: 2.6%;
+  }
+
+  &__dots {
+    margin-right: 6%;
+    margin-top: 62px;
+  }
+
+  &__headline {
+    @include arch(regular);
+    font-size: 30px;
+    line-height: 30px;
+    margin-bottom: 28px;
+  }
+
+  &__content {
+    font-size: 20px;
+  }
+}
+
+.dots__pic {
+  height: 47px;
+  width: 2px;
+  fill: $grey;
+}
